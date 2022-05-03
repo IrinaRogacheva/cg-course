@@ -7,6 +7,7 @@ MainFrame::MainFrame()
 {
     wxInitAllImageHandlers();
 
+    SetMinSize(wxSize(250, 200));
     wxMenu* menuFile = new wxMenu;
     menuFile->Append(0, wxString("Open"));
     wxMenuBar* menuBar = new wxMenuBar;
@@ -27,8 +28,8 @@ void MainFrame::OnOpenFile(wxCommandEvent& WXUNUSED(event))
     wxBoxSizer* sizer = new wxBoxSizer(wxHORIZONTAL);
     
     Canvas* canvas = new Canvas(this);
-    wxBitmap bmp(openFileDialog.GetPath(), wxBITMAP_TYPE_ANY);
-    canvas->SetBitmap(bmp);
+    wxImage img(openFileDialog.GetPath(), wxBITMAP_TYPE_ANY);
+    canvas->SetImage(img);
 
     sizer->Add(canvas, 1, wxEXPAND);
 
