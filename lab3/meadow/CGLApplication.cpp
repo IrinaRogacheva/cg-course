@@ -27,7 +27,7 @@ CGLApplication::CGLApplication(
 	char* c = nullptr; // инициализировать тип char *
 	c = const_cast <char*> (constc);
 	char* argv[] = { c, };
-	
+
 	glutInit(&argc, argv);
 
 	// Задаем режим буфера кадра, запрошенный пользователем
@@ -35,7 +35,7 @@ CGLApplication::CGLApplication(
 		GLUT_RGBA |
 		GLUT_DOUBLE |
 		(needDepth ? GLUT_DEPTH : 0) |
-		(needStencil ? GLUT_STENCIL : 0) 
+		(needStencil ? GLUT_STENCIL : 0)
 	);
 
 	// Если пользователь указал размеры окна, сообщаем о них GLUT
@@ -43,7 +43,7 @@ CGLApplication::CGLApplication(
 	{
 		glutInitWindowSize(width, height);
 	}
-	glutInitWindowPosition(250, 150);
+	glutInitWindowPosition(220, 80);
 
 	// Создаем окно приложения
 	glutCreateWindow(title);
@@ -148,21 +148,13 @@ void CGLApplication::PostRedisplay()
 	// Инициируем перерисовку калпа
 	glutPostRedisplay();
 }
-/*
-template<class T>
-void CGLApplication::SetTimer(int milliseconds, void (T::*func)(int value), int value)
+
+void CGLApplication::SetTimer(int milliseconds, void (*func)(int value), int value)
 {
-	//(static_cast<T*>(this)->*func)();
 	// Устанавливаем таймер
 	glutTimerFunc(milliseconds, func, value);
 }
 
-
-void CGLApplication::Callback(int value)
-{
-	m_pApplication->Callback(value);
-}
-*/
 void CGLApplication::MainLoop(void)
 {
 	// Вызываем обработчик OnInit, который может быть 

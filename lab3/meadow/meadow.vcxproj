@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f52c56c0-d265-4933-900c-879e77d59199}</ProjectGuid>
-    <RootNamespace>lab3</RootNamespace>
+    <ProjectGuid>{55646430-4d85-4977-ae9d-e843abbb9f46}</ProjectGuid>
+    <RootNamespace>meadow</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -88,7 +88,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -103,7 +102,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -118,7 +116,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,7 +130,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,18 +139,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CChargedParticle.cpp" />
+    <ClCompile Include="CButterfly.cpp" />
+    <ClCompile Include="CFlower.cpp" />
+    <ClCompile Include="CGrassFern.cpp" />
+    <ClCompile Include="CGrassStems.cpp" />
+    <ClCompile Include="CPositionGenerator.cpp" />
     <ClCompile Include="CGLApplication.cpp" />
+    <ClCompile Include="CLilyFlower.cpp" />
     <ClCompile Include="CMyApplication.cpp" />
+    <ClCompile Include="COblongPetalFlower.cpp" />
+    <ClCompile Include="CRoundPetalFlower.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CChargedParticle.h" />
+    <ClInclude Include="CButterfly.h" />
+    <ClInclude Include="CFlower.h" />
+    <ClInclude Include="CGrassFern.h" />
+    <ClInclude Include="CGrassStems.h" />
+    <ClInclude Include="CPositionGenerator.h" />
     <ClInclude Include="CGLApplication.h" />
-    <ClInclude Include="ChargeSign.h" />
+    <ClInclude Include="CLilyFlower.h" />
     <ClInclude Include="CMyApplication.h" />
+    <ClInclude Include="COblongPetalFlower.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="CRoundPetalFlower.h" />
+    <ClInclude Include="EButterflyType.h" />
+    <ClInclude Include="EFlowerType.h" />
+    <ClInclude Include="FlowerColorsMap.h" />
+    <ClInclude Include="IButterfly.h" />
+    <ClInclude Include="IDrawable.h" />
+    <ClInclude Include="IFlower.h" />
+    <ClInclude Include="IGrass.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -14,7 +14,6 @@ protected:
 		bool needDepth = true,
 		bool needStencil = false
 	);
-	//virtual ~CGLApplication(void);
 
 	virtual void OnInit();
 	// Методы-обработчики событий могут быть перегружены в классе-наследнике
@@ -29,15 +28,7 @@ protected:
 	void PostRedisplay();
 
 	// Установка обработчика таймера
-	//template<class T>
-	void SetTimer(int milliseconds, void (*func)(int value), int value)
-	{
-		//(static_cast<T*>(this)->*func)(0);
-		// Устанавливаем таймер
-		//m_pApplication->SetTimer(milliseconds, func, value);
-		glutTimerFunc(milliseconds, func, value);
-	}
-	//virtual void Callback(int value);
+	void SetTimer(int milliseconds, void (*func)(int value), int value);
 private:
 	void InitEventHandlers();
 	static void DisplayHandler();
