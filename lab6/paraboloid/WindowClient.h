@@ -18,7 +18,7 @@ private:
     void CheckOpenGLVersion();
     void SetupView(const glm::ivec2& size);
 
-    void DrawLine() const;
+    void DrawParaboloid() const;
 
     CShaderProgram m_program;
     float m_time = 0;

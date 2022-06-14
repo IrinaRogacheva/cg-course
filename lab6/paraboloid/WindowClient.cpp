@@ -4,11 +4,6 @@
 
 namespace
 {
-    const float START_X = 0;
-    const float END_X = 2.f * float(M_PI);
-    const float STEP = float(M_PI) / 1000.f;
-    const float Y = 0;
-
     void SetupOpenGLState()
     {
         // включаем механизмы трёхмерного мира.
@@ -23,7 +18,6 @@ CWindowClient::CWindowClient(CWindow& window)
     : CAbstractWindowClient(window)
 {
     const glm::vec4 WHITE = { 1.f, 1.f, 1.f, 1.f };
-    const glm::vec4 GREEN = { 0.15f, 0.4f, 0.15f, 1.f };
     GetWindow().SetBackgroundColor(WHITE);
     CheckOpenGLVersion();
     SetupOpenGLState();
@@ -51,7 +45,7 @@ void CWindowClient::OnDrawWindow()
     CProgramUniform time = m_program.FindUniform("u_time");
     time = m_time;
 
-    DrawLine();
+    DrawParaboloid();
 }
 
 void CWindowClient::CheckOpenGLVersion()
@@ -75,7 +69,7 @@ void CWindowClient::SetupView(const glm::ivec2& size)
     glMatrixMode(GL_MODELVIEW);
 }
 
-void CWindowClient::DrawLine() const
+void CWindowClient::DrawParaboloid() const
 {
     glm::vec3 startPos = { -1, 0, -1 };
     glColor4d(0, 0, 0, 1);
@@ -98,6 +92,5 @@ void CWindowClient::DrawLine() const
 
             currPos.z += 0.1f;
         }
-
     }
 }
