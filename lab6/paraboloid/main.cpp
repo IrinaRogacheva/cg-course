@@ -10,7 +10,7 @@ int main(int, char* [])
     try
     {
         CWindow window;
-        window.Show("Kanabola", { 800, 600 });
+        window.Show("Paraboloid", { 800, 600 });
         CWindowClient client(window);
         window.DoMainLoop();
     }

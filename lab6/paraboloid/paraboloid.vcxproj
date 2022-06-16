@@ -164,8 +164,6 @@
     <ClInclude Include="WindowClient.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\checkers-and-triangle.frag" />
-    <None Include="res\checkers.frag" />
     <None Include="res\paraboloid.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
